@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Fun Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Earth Fun Fact Generator</h1>
+        <p id="fun-fact">Click the button to see a fun fact about Earth!</p>
+        <button onclick="generateFunFact()">Generate Fun Fact</button>
+    </div>
+    <script>
+        const funFacts = [
+            "Earth is the only planet in our solar system not named after a god.",
+            "70% of the Earth's surface is covered in water.",
+            "Earth's atmosphere is composed of 78% nitrogen, 21% oxygen, and 1% other gases.",
+            "The Earth's rotation is gradually slowing down at approximately 17 milliseconds per hundred years.",
+            "Earth is the densest planet in the solar system.",
+            "The Earth's core is as hot as the surface of the sun.",
+            "Earth has one moon and two co-orbital satellites.",
+            "The Earth is about 4.54 billion years old.",
+            "The highest point on Earth is Mount Everest, which is 8,848 meters tall.",
+            "The lowest point on Earth is the Mariana Trench, which is about 11,034 meters deep."
+        ];
+
+        function generateFunFact() {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            document.getElementById('fun-fact').textContent = funFacts[randomIndex];
+        }
+    </script>
+</body>
+</html>
